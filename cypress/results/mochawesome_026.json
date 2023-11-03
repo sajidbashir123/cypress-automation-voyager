@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-11-02T12:25:17.803Z",
+    "end": "2023-11-02T12:25:52.729Z",
+    "duration": 34926,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "f8a888c0-aa12-42c7-92ce-356a0aeccc92",
+      "title": "",
+      "fullFile": "cypress\\e2e\\CaseView\\ProcessRequest.cy.js",
+      "file": "cypress\\e2e\\CaseView\\ProcessRequest.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "4ddfb51f-f2df-42b1-8378-e4d56ffa5f6c",
+          "title": "New Process Request Creation",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "New 'AOS' Process Request",
+              "fullTitle": "New Process Request Creation New 'AOS' Process Request",
+              "timedOut": null,
+              "duration": 34311,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('button[aria-label=\"Create\"]:visible').click();\ncy.wait(1000);\ncy.get('#Create-actions:visible > button[title=\"New Case\"]').click();\n//Drop down to searching sajid fn17\ncy.get(\"input.MuiInputBase-input\").click().type(\"sajid Fn17\").wait(3000).type(\"{downArrow}\").type(\"{enter}\");\ncy.wait(2000);\ncy.get('input[value=\"false\"]').click();\ncy.wait(2000);\ncy.contains(\"SHOW MORE OPTIONS\").click();\ncy.wait(3000);\n//**************** Select a case by name ************/\ncy.get('input[value=\"AOS\"]').click();\ncy.get(\"input#salary-input\").type(\"1200\");\ncy.get('input[value=\"REMOTE\"]').click();\ncy.contains(\"EXISTING JOB\").click();\ncy.wait(2000);\ncy.get(\"#job-select\").click();\ncy.get('li[data-value=\"f258db95-ca92-4173-8032-2c8d2f17a23d\"]').should(\"have.text\", \"QA Engineer\").click();\ncy.wait(500);\ncy.get(\"#special-notes-input\").type(\"Automation testing\");\ncy.contains(\"SUBMIT CASE REQUEST\").click();\ncy.get('a[href=\"/process-requests\"]').should(\"contain.text\", \"Process Requests\");\ncy.wait(2000);",
+              "err": {},
+              "uuid": "bfa9d522-db47-49f2-9ecf-cb0b86fbe0ed",
+              "parentUUID": "4ddfb51f-f2df-42b1-8378-e4d56ffa5f6c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "bfa9d522-db47-49f2-9ecf-cb0b86fbe0ed"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 34311,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

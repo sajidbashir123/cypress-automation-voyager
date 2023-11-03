@@ -1,0 +1,29 @@
+{
+  "name": "cypress-automation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress run",
+    "headed": "npm run test -- --headed",
+    "chrome": "npm run headed -- --browser chrome",
+    "cypress-cloud-case": "npm run test -- --record --key 15f21129-77a6-4c3f-bfbf-9611f2b67a70 --headed --browser chrome --spec \"cypress/e2e/CaseView/CaseOverviewTab*/\"",
+    "cypress-cloud": "npm run test -- --record --key 15f21129-77a6-4c3f-bfbf-9611f2b67a70",
+    "CaseOverviewTab": "npm run test -- --spec \"cypress/e2e/CaseView/CaseOverviewTab.cy.js\"",
+    "HTML-Report-CaseOverviewTab": "npm run test --reporter mochawesome -- --spec \"cypress/e2e/CaseView/CaseOverviewTab.cy.js\"",
+    "HTML-Report-all-specs": "npm run test -- --record --key 15f21129-77a6-4c3f-bfbf-9611f2b67a70 --reporter mochawesome"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^13.3.0"
+  },
+  "devDependencies": {
+    "cypress-file-upload": "^5.0.8",
+    "cypress-iframe": "^1.0.1",
+    "cypress-mochawesome-reporter": "^3.6.1",
+    "mocha": "^10.2.0",
+    "mochawesome": "^7.1.3"
+  }
+}

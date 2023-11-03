@@ -1,0 +1,124 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 1,
+    "pending": 0,
+    "failures": 1,
+    "start": "2023-11-02T05:34:21.856Z",
+    "end": "2023-11-02T05:35:43.779Z",
+    "duration": 81923,
+    "testsRegistered": 2,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "90e9b3e4-6a10-4ade-8c4a-6dcbbb22979e",
+      "title": "",
+      "fullFile": "cypress\\e2e\\ProcessRequest&FileUploaded.cy.js",
+      "file": "cypress\\e2e\\ProcessRequest&FileUploaded.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "6d20a696-13af-44d0-aa0a-fd439d4ecf6d",
+          "title": "New Process Request + File Uploading",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Create 'H-1B' Process Request for User 'Sajid fn17'",
+              "fullTitle": "New Process Request + File Uploading Create 'H-1B' Process Request for User 'Sajid fn17'",
+              "timedOut": null,
+              "duration": 46316,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('button[aria-label=\"Create\"]:visible').click();\ncy.wait(1000);\ncy.get('#Create-actions:visible > button[title=\"New Case\"]').click();\n//Drop down to searching sajid fn17\ncy.get(\"input.MuiInputBase-input\").click().type(\"sajid Fn17\").wait(3000).type(\"{downArrow}\").type(\"{enter}\");\ncy.wait(2000);\ncy.get('input[value=\"false\"]').click();\ncy.get('input[value=\"H_1B\"]').click();\ncy.get(\"input#salary-input\").type(\"1200\");\ncy.get('input[value=\"REMOTE\"]').click();\ncy.contains(\"EXISTING JOB\").click();\ncy.wait(2000);\ncy.get(\"#job-select\").click();\ncy.get('li[data-value=\"f258db95-ca92-4173-8032-2c8d2f17a23d\"]').should(\"have.text\", \"QA Engineer\").click();\ncy.wait(500);\ncy.contains(\"No\").click();\ncy.get(\"#special-notes-input\").type(\"Automation testing\");\ncy.contains(\"SUBMIT CASE REQUEST\").click();\ncy.get('a[href=\"/process-requests\"]').should(\"contain.text\", \"Process Requests\");\ncy.wait(2000);",
+              "err": {
+                "message": "CypressError: Timed out retrying after 20050ms: `cy.click()` failed because this element:\n\n`<p class=\"MuiTypography-root jss84 MuiTypography-body1 MuiTypography-gutterBottom MuiTypography-alignCenter\">Novembe...</p>`\n\nis being covered by another element:\n\n`<div class=\"MuiGrid-root MuiGrid-container MuiGrid-justify-content-xs-space-around\">...</div>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with",
+                "estack": "CypressError: Timed out retrying after 20050ms: `cy.click()` failed because this element:\n\n`<p class=\"MuiTypography-root jss84 MuiTypography-body1 MuiTypography-gutterBottom MuiTypography-alignCenter\">Novembe...</p>`\n\nis being covered by another element:\n\n`<div class=\"MuiGrid-root MuiGrid-container MuiGrid-justify-content-xs-space-around\">...</div>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with\n    at ensureIsDescendent (https://dev.meltzerhellrung.com/__cypress/runner/cypress_runner.js:111681:68)\n    at ensureDescendents (https://dev.meltzerhellrung.com/__cypress/runner/cypress_runner.js:111732:5)\n    at ensureDescendentsAndScroll (https://dev.meltzerhellrung.com/__cypress/runner/cypress_runner.js:111738:14)\n    at ensureElIsNotCovered (https://dev.meltzerhellrung.com/__cypress/runner/cypress_runner.js:111869:5)\n    at runAllChecks (https://dev.meltzerhellrung.com/__cypress/runner/cypress_runner.js:112068:52)\n    at retryActionability (https://dev.meltzerhellrung.com/__cypress/runner/cypress_runner.js:112105:16)\n    at tryCatcher (https://dev.meltzerhellrung.com/__cypress/runner/cypress_runner.js:1807:23)\n    at Promise.attempt.Promise.try (https://dev.meltzerhellrung.com/__cypress/runner/cypress_runner.js:4315:29)\n    at whenStable (https://dev.meltzerhellrung.com/__cypress/runner/cypress_runner.js:143908:68)\n    at <unknown> (https://dev.meltzerhellrung.com/__cypress/runner/cypress_runner.js:143849:14)\n    at tryCatcher (https://dev.meltzerhellrung.com/__cypress/runner/cypress_runner.js:1807:23)\n    at Promise._settlePromiseFromHandler (https://dev.meltzerhellrung.com/__cypress/runner/cypress_runner.js:1519:31)\n    at Promise._settlePromise (https://dev.meltzerhellrung.com/__cypress/runner/cypress_runner.js:1576:18)\n    at Promise._settlePromise0 (https://dev.meltzerhellrung.com/__cypress/runner/cypress_runner.js:1621:10)\n    at Promise._settlePromises (https://dev.meltzerhellrung.com/__cypress/runner/cypress_runner.js:1701:18)\n    at Promise._fulfill (https://dev.meltzerhellrung.com/__cypress/runner/cypress_runner.js:1645:18)\n    at <unknown> (https://dev.meltzerhellrung.com/__cypress/runner/cypress_runner.js:5450:46)\nFrom Your Spec Code:\n    at Context.eval (webpack://cypress-automation/./cypress/e2e/ProcessRequest&FileUploaded.cy.js:35:22)",
+                "diff": null
+              },
+              "uuid": "8e432ccd-025c-46b0-8d12-7fb64fb414fd",
+              "parentUUID": "6d20a696-13af-44d0-aa0a-fd439d4ecf6d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "File uplaoding Test in Sajid Fn4's Documents",
+              "fullTitle": "New Process Request + File Uploading File uplaoding Test in Sajid Fn4's Documents",
+              "timedOut": null,
+              "duration": 33117,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('[href=\"/contacts\"] > .MuiButton-label').click();\ncy.get(\"#contact-navigation-2 > .MuiTab-wrapper\").click();\ncy.get(\".MuiTextField-root > .MuiInputBase-root > .MuiInputBase-input\").type(\"sajid fn4{Enter}\");\ncy.wait(5000);\ncy.get('[href=\"/people/sajid-fn4-2\"] > .MuiPaper-root').click();\ncy.get(\"#person-navigation-1 > .MuiTab-wrapper\").click();\ncy.get(\"label[for='contained-button-file-DIPLOMA'] span[class='MuiButton-label']\").click();\n/*************Uploading a test file */\ncy.get(\"input[type=file]\").eq(0).selectFile(\"cypress//fixtures//testfile.png\", {\n  force: true\n});\ncy.log(\"File Uplaoded Successfully\");",
+              "err": {},
+              "uuid": "ca1442ea-5b44-4bb8-9a40-3ad8d2267979",
+              "parentUUID": "6d20a696-13af-44d0-aa0a-fd439d4ecf6d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ca1442ea-5b44-4bb8-9a40-3ad8d2267979"
+          ],
+          "failures": [
+            "8e432ccd-025c-46b0-8d12-7fb64fb414fd"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 79433,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}

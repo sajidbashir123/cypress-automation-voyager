@@ -1,0 +1,129 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 1,
+    "pending": 0,
+    "failures": 1,
+    "start": "2023-11-02T06:05:02.012Z",
+    "end": "2023-11-02T06:05:53.801Z",
+    "duration": 51789,
+    "testsRegistered": 2,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "1febc858-eec5-4cc8-ae36-b8a18de7a27f",
+      "title": "",
+      "fullFile": "cypress\\e2e\\CaseView\\CaseOverviewTab.cy.js",
+      "file": "cypress\\e2e\\CaseView\\CaseOverviewTab.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "01bbf3e8-a1e6-4ccb-babb-964918606922",
+          "title": "Case's 'Overview' Tab",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verifying the Displaying Card from Name",
+              "fullTitle": "Case's 'Overview' Tab Verifying the Displaying Card from Name",
+              "timedOut": null,
+              "duration": 26885,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "//*************Open task*****/\ncy.get(\".jss547 > .MuiTypography-root\", {\n  timeout: 1000\n}).should(\"include.text\", \"Open Tasks\");\n//*************key dates*****/\ncy.get(\".jss492 > .MuiTypography-root\").should(\"include.text\", \"Key Dates\");\n//*************Prevailing Wage Case*****/\ncy.get(`.MuiTypography-root.jss5575.MuiTypography-body1[shub-ins=\"1\"]`).should(\"contain.text\", \"Prevailing Wage Case\");\n//*******Shipment Tracking******/\ncy.get(\".jss505 > .MuiTypography-root\").should(\"contain.text\", \"Shipment Tracking\");\n/***********Receipt Numbers******/\ncy.get(\".jss520 > .MuiTypography-root\").should(\"contain.text\", \"Receipt Numbers\");\n//***************Payment Status*******/\ncy.get(\".jss531 > .MuiTypography-root\").should(\"contain.text\", \"Payment Status\");",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 1000ms: Expected to find element: `.jss547 > .MuiTypography-root`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 1000ms: Expected to find element: `.jss547 > .MuiTypography-root`, but never found it.\n    at Context.eval (webpack://cypress-automation/./cypress/e2e/CaseView/CaseOverviewTab.cy.js:34:63)",
+                "diff": null
+              },
+              "uuid": "54e0a437-544a-46f8-9929-b3236ed78acb",
+              "parentUUID": "01bbf3e8-a1e6-4ccb-babb-964918606922",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verifying the Displaying Card from Name (Using 'Contains' keyword",
+              "fullTitle": "Case's 'Overview' Tab Verifying the Displaying Card from Name (Using 'Contains' keyword",
+              "timedOut": null,
+              "duration": 23874,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//*************Open task*****/\ncy.contains(\"Open Tasks\").should(\"be.visible\");\n//*************key dates*****/\ncy.contains(\"Key Dates\").scrollIntoView().should(\"be.visible\");\n//*************Prevailing Wage Case*****/\ncy.contains(\"Prevailing Wage Case\").should(\"be.visible\");\n/***********Receipt Numbers******/\ncy.contains(\"Receipt Numbers\").should(\"be.visible\");\n//*******Shipment Tracking******/\ncy.contains(\"Shipment Tracking\").scrollIntoView().should(\"be.visible\");\n//***************Payment Status*******/\ncy.contains(\"Payment Status\").scrollIntoView().should(\"be.visible\");",
+              "err": {},
+              "uuid": "86640a59-95ec-401c-a006-0a899e2409a3",
+              "parentUUID": "01bbf3e8-a1e6-4ccb-babb-964918606922",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "86640a59-95ec-401c-a006-0a899e2409a3"
+          ],
+          "failures": [
+            "54e0a437-544a-46f8-9929-b3236ed78acb"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 50759,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

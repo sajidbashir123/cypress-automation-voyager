@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-11-02T12:26:07.186Z",
+    "end": "2023-11-02T12:26:46.659Z",
+    "duration": 39473,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "bbfb014f-51dc-44bb-8ae5-aff6e1129d9e",
+      "title": "",
+      "fullFile": "cypress\\e2e\\FnDocumentsDropdown.cy.js",
+      "file": "cypress\\e2e\\FnDocumentsDropdown.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c380c2c9-03ec-4ea2-9327-829143859fab",
+          "title": "FN's Additional Documents Types",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Adding All List Documents",
+              "fullTitle": "FN's Additional Documents Types Adding All List Documents",
+              "timedOut": null,
+              "duration": 35416,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"/\");\n//login\ncy.get(\"#username-input\").type(\"sajid.bashir+mh3@kwanso.com\");\ncy.get(\"#password-input\").type(\"Test#123{Enter}\");\n//clicking on contact and searching for sajid fn64\ncy.get('[href=\"/contacts\"] > .MuiButton-label').click();\ncy.get(\"#contact-navigation-2 > .MuiTab-wrapper\").click();\ncy.get(\".MuiTextField-root > .MuiInputBase-root > .MuiInputBase-input\").type(\"sajid fn64\");\ncy.wait(2000);\ncy.get(\".MuiLink-root > .MuiPaper-root\").click();\ncy.get(\"#person-navigation-4 > .MuiTab-wrapper\").click();\n//change the case for this specific users\ncy.get(\":nth-child(2) > :nth-child(1) > a\").click();\n//cy.wait(1000);\ncy.get(\"#case-navigation-2 > .MuiTab-wrapper\").click();\n// recursive function working as loop\nfunction AddDcument() {\n  cy.get(\"#case-navigationpanel-2 > section > div > div > button > span.MuiIconButton-label > svg\").click();\n  cy.get('.MuiList-root > [tabindex=\"0\"]').click();\n  cy.get(\"#modal\").then($element => {\n    const elementText = $element.text();\n    if (elementText.includes(\"There are no more documents left to add.\")) {\n      cy.get('button[data-title=\"close-button\"]').click();\n      return;\n    } else {\n      //open dropdown to add document types\n      cy.get(\"#mui-component-select-fileType\").click();\n      cy.get(\"#menu-fileType > div.MuiPaper-root.MuiMenu-paper.MuiPopover-paper.MuiPaper-elevation8.MuiPaper-rounded > ul > li:nth-child(1)\").click();\n      cy.get(\"button.MuiButtonBase-root.MuiButton-root.MuiButton-text.MuiButton-textPrimary\").click();\n      cy.wait(3000);\n    }\n    AddDcument(); // Call the function again for the next iteration\n  });\n}\n// Calling first time\nAddDcument();",
+              "err": {},
+              "uuid": "06cf2458-c9d6-4588-8c35-e1e4332724f6",
+              "parentUUID": "c380c2c9-03ec-4ea2-9327-829143859fab",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "06cf2458-c9d6-4588-8c35-e1e4332724f6"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 35416,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
