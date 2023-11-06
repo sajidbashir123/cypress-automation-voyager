@@ -11,9 +11,10 @@ module.exports = defineConfig({
     reporter: "mochawesome", // To generate the HTML report of the executed tested case for external use. it added when we install the mochaawesome dependency
     reporterOptions: {
       reportDir: "cypress/results",
+      charts: true,
       overwrite: false,
-      html: false,
-      json: true,
+      html: true,
+      json: false,
     },
     screenshotOnRunFailure: true,
     screenshotsFolder: "cypress/screenshots",
