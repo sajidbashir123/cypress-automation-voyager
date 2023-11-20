@@ -43,7 +43,7 @@ describe("New Process Request + File Uploading", () => {
 
   //File uplaods
 
-  it("File uplaoding Test in Sajid Fn4's Documents", () => {
+  it.only("File uplaoding Test in Sajid Fn4's Documents", () => {
     cy.get('[href="/contacts"] > .MuiButton-label').click();
     cy.get("#contact-navigation-2 > .MuiTab-wrapper").click();
     cy.get(
