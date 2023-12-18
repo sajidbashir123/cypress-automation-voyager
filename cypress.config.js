@@ -14,7 +14,7 @@ module.exports = defineConfig({
       charts: true,
       overwrite: false,
       html: true,
-      json: false,
+      json: true,
     },
     screenshotOnRunFailure: true,
     screenshotsFolder: "cypress/screenshots",
