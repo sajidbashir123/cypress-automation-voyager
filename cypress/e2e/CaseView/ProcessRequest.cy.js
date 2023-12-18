@@ -36,12 +36,14 @@ describe("New Process Request Creation", () => {
       .should("have.text", "QA Engineer")
       .click();
     cy.wait(500);
-    cy.get("#special-notes-input").type("Automation testing");
+    cy.get("#special-notes-input").type(
+      "Automating new 'AOS' Process Resquest with Cyress"
+    );
     cy.contains("SUBMIT CASE REQUEST").click();
     cy.get('a[href="/process-requests"]').should(
       "contain.text",
       "Process Requests"
     );
-    cy.wait(2000);
+    cy.wait(5000);
   });
 });

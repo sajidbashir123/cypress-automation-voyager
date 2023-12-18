@@ -33,10 +33,25 @@ describe("Case's 'Document' Tab", () => {
     ).click();
 
     /*************Uploading a test file */
+    cy.intercept({
+      method: "POST",
+      url: "https://72ao7fxqpvb63fn7mzt2j2cp3e.appsync-api.us-east-1.amazonaws.com/graphql",
+    }).as("dataGetFirst");
 
     cy.get("input[type=file]")
       .eq(2)
       .selectFile("cypress//fixtures//testfile.png", { force: true });
+
+    // Visit site
+    cy.waitUntil(
+      () =>
+        cy.get("@dataGetFirst").its("response.statusCode").should("equal", 200),
+      {
+        timeout: 15000, // Increase timeout as needed
+        interval: 1000, // Adjust interval between retries if necessary
+        errorMsg: "Request did not occur within the specified time.",
+      }
+    );
     cy.log("File Uplaoded Successfully");
 
     /*************Removing a test file */

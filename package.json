@@ -11,7 +11,9 @@
     "cypress-cloud": "npm run test -- --record --key 15f21129-77a6-4c3f-bfbf-9611f2b67a70",
     "CaseOverviewTab": "npm run test -- --spec \"cypress/e2e/CaseView/CaseOverviewTab.cy.js\"",
     "HTML-Report-CaseOverviewTab": "npm run test --reporter mochawesome -- --spec \"cypress/e2e/CaseView/CaseOverviewTab.cy.js\"",
-    "HTML-Report-all-specs": "npm run test -- --record --key 15f21129-77a6-4c3f-bfbf-9611f2b67a70 --reporter mochawesome"
+    "HTML-Report-all-specs": "npm run test -- --record --key 15f21129-77a6-4c3f-bfbf-9611f2b67a70 --reporter mochawesome",
+    "merge-reports": "mochawesome-merge cypress/results/mochawesome/*.json -o cypress/results/mochawesome/merged.json",
+    "generate-html-report": "mochawesome-report-generator cypress/results/mochawesome/merged.json -o cypress/results/mochawesome-report"
   },
   "keywords": [],
   "author": "",
@@ -22,7 +24,10 @@
   "devDependencies": {
     "cypress-file-upload": "^5.0.8",
     "cypress-iframe": "^1.0.1",
+    "cypress-wait-until": "^2.0.1",
     "mocha": "^10.2.0",
-    "mochawesome": "^7.1.3"
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.3.0",
+    "mochawesome-report-generator": "^6.2.0"
   }
 }
