@@ -37,7 +37,7 @@ describe("New Process Request Creation", () => {
       .click();
     cy.wait(500);
     cy.get("#special-notes-input").type(
-      "Automating new 'AOS' Process Resquest with Cyress"
+      "Automating new 'AOS' Process Request with Cypress"
     );
     cy.contains("SUBMIT CASE REQUEST").click();
     cy.get('a[href="/process-requests"]').should(
