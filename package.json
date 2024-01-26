@@ -9,12 +9,11 @@
     "chrome": "npm run headed -- --browser chrome",
     "cypress-cloud-case": "npm run test -- --spec \"cypress/e2e/CaseView/CaseTaskTab.cy.js*/\"",
     "cypress-cloud": "npm run test -- --record --key 15f21129-77a6-4c3f-bfbf-9611f2b67a70",
-    "CaseOverviewTab": "npm run test -- --spec \"cypress/e2e/CaseView/CaseOverviewTab.cy.js\"",
-    "HTML-Report-CaseOverviewTab": "npm run test --reporter mochawesome -- --spec \"cypress/e2e/CaseView/CaseOverviewTab.cy.js\"",
-    "HTML-Report-all-specs": "npm run test -- --record --key 15f21129-77a6-4c3f-bfbf-9611f2b67a70 --reporter mochawesome",
-    "merge-reports": "mochawesome-merge cypress/results/*.json -o cypress/results/mochawesome/merged.json",
-    "generate-html-report": "mochawesome-report-generator cypress/results/mochawesome/merged.json -o cypress/results/mochawesome",
-    "generate-html-report-merge": "reporter mochawesome cypress/results/mochawesome/merged.json -o cypress/results/mochawesome"
+    "case-overview-tab": "npm run test -- --spec \"cypress/e2e/CaseView/CaseOverviewTab.cy.js\"",
+    "html-report-case-overview-tab": "npm run test --reporter mochawesome -- --spec \"cypress/e2e/CaseView/CaseOverviewTab.cy.js\"",
+    "html-report-all-specs": "npm run test -- --record --key 15f21129-77a6-4c3f-bfbf-9611f2b67a70 --reporter mochawesome",
+    "merge-reports": "mochawesome-merge cypress/results/*.json -o cypress/mochawesome-merged/merged.json",
+    "generate-html-report": "npx mochawesome-report-generator cypress/mochawesome-merged/merged.json -o mochawesome-html-report -f merged.html"
   },
   "keywords": [],
   "author": "",
@@ -28,6 +27,7 @@
     "cypress-wait-until": "^2.0.1",
     "mocha": "^10.2.0",
     "mochawesome": "^7.1.3",
-    "mochawesome-merge": "^4.3.0"
+    "mochawesome-merge": "^4.3.0",
+    "mochawesome-report-generator": "^6.2.0"
   }
 }
