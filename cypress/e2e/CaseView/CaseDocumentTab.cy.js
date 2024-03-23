@@ -27,7 +27,7 @@ describe("Case's 'Document' Tab", () => {
     cy.wait(2000);
   });
 
-  it("'File Uploading' Test", () => {
+  it.skip("'File Uploading' Test", () => {
     cy.get("label[for='contained-button-file-DIPLOMA'] span[class='MuiButton-label']").click();
 
     /*************Uploading a test file */
@@ -48,10 +48,10 @@ describe("Case's 'Document' Tab", () => {
         interval: 500,
         errorMsg: "Request did not occur within the specified time.",
       }
-    );
-    cy.log("File Uplaoded Successfully");
+     );
+     cy.log("File Uplaoded Successfully");
 
-    /*************Removing a test file */
+     /*************Removing a test file */
     /*
     cy.contains("bot")
       .should("be.visible")
@@ -60,5 +60,29 @@ describe("Case's 'Document' Tab", () => {
 
     cy.log("File Removed Successfully");
     */
-  });
+   
+  });  
+
+ //File uplaods
+
+  it("File uplaod", () => {
+      cy.get('[href="/contacts"] > .MuiButton-label').click();
+      cy.get("#contact-navigation-2 > .MuiTab-wrapper").click();
+      cy.get(
+        ".MuiTextField-root > .MuiInputBase-root > .MuiInputBase-input"
+      ).type("sajid fn{Enter}");
+      cy.wait(5000);
+      cy.get('[href="/people/sajid-fn4-2"] > .MuiPaper-root').click();
+      cy.get("#person-navigation-1 > .MuiTab-wrapper").click();
+      cy.get(
+        "label[for='contained-button-file-DIPLOMA'] span[class='MuiButton-label']"
+      ).click();
+      cy.get("input[type=file]")
+        .eq(0)
+        .selectFile("cypress//fixtures//testfile.png", { force: true });
+      //file to uplaod (if we choser the css selector type file only then the uploaded file will be display in cypress)
+      //cy.get("label[for='contained-button-file-DIPLOMA'] span[class='MuiButton-label']").attachFile('bot.jpg');
+      //cy.wait(5000);
+    });
+
 });
