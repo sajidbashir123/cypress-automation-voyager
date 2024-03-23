@@ -28,15 +28,27 @@ describe("Case's 'Document' Tab", () => {
   });
 
   it("'File Uploading' Test", () => {
-    cy.get(
-      "label[for='contained-button-file-DIPLOMA'] span[class='MuiButton-label']"
-    ).click();
+    cy.get("label[for='contained-button-file-DIPLOMA'] span[class='MuiButton-label']").click();
 
     /*************Uploading a test file */
+    // intercept for spying
+    cy.intercept({
+      method: "POST",
+      url: "https://72ao7fxqpvb63fn7mzt2j2cp3e.appsync-api.us-east-1.amazonaws.com/graphql",
+    }).as("fileUpload");
 
-    cy.get("input[type=file]")
-      .eq(2)
-      .selectFile("cypress//fixtures//testfile.png", { force: true });
+    // select file from cypress fixtures folder for upload
+    cy.get("input[type=file]").eq(2).selectFile("cypress//fixtures//testfile.png", { force: true });
+
+    // assertion for wait file upload
+    cy.waitUntil(() =>
+      cy.get("@fileUpload").its("response.statusCode").should("equal", 200),
+      {
+        timeout: 0,
+        interval: 500,
+        errorMsg: "Request did not occur within the specified time.",
+      }
+    );
     cy.log("File Uplaoded Successfully");
 
     /*************Removing a test file */

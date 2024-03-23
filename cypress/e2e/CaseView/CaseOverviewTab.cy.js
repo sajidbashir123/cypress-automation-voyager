@@ -29,7 +29,7 @@ describe("Case's 'Overview' Tab", () => {
 
   //*************Heading of OverView Cards*****/
 
-  it.skip("Verifying the Displaying Card from Name", () => {
+  it("Verifying the Displaying Card from Name", () => {
     //*************Open task*****/
     cy.get(".jss547 > .MuiTypography-root", { timeout: 1000 }).should(
       "include.text",
