@@ -1,24 +1,24 @@
 {
   "stats": {
     "suites": 6,
-    "tests": 7,
+    "tests": 8,
     "passes": 6,
-    "pending": 0,
+    "pending": 1,
     "failures": 1,
-    "testsRegistered": 7,
-    "passPercent": 85.71428571428571,
-    "pendingPercent": 0,
+    "testsRegistered": 8,
+    "passPercent": 75,
+    "pendingPercent": 12.5,
     "other": 0,
     "hasOther": false,
     "skipped": 0,
     "hasSkipped": false,
-    "start": "2024-01-26T21:38:54.797Z",
-    "end": "2024-01-26T21:42:28.963Z",
-    "duration": 214166
+    "start": "2024-03-24T07:27:08.148Z",
+    "end": "2024-03-24T07:32:26.787Z",
+    "duration": 318639
   },
   "results": [
     {
-      "uuid": "a8c35f64-a464-41c2-b184-c03d8fe047da",
+      "uuid": "e014d4ab-ed84-4445-991f-6440ba692164",
       "title": "",
       "fullFile": "cypress\\e2e\\CaseView\\CaseOverviewTab.cy.js",
       "file": "cypress\\e2e\\CaseView\\CaseOverviewTab.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "62c95bd9-e22b-4141-8ff4-54a6b2cf1c55",
+          "uuid": "6d2ca34f-0cdb-4853-b27b-40f0d880f5fa",
           "title": "Case's 'Overview' Tab",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Verifying the Displaying Card from Name",
               "fullTitle": "Case's 'Overview' Tab Verifying the Displaying Card from Name",
               "timedOut": null,
-              "duration": 20816,
+              "duration": 23869,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -47,12 +47,12 @@
               "context": null,
               "code": "//*************Open task*****/\ncy.get(\".jss547 > .MuiTypography-root\", {\n  timeout: 1000\n}).should(\"include.text\", \"Open Tasks\");\n//*************key dates*****/\ncy.get(\".jss492 > .MuiTypography-root\").should(\"include.text\", \"Key Dates\");\n//*************Prevailing Wage Case*****/\ncy.get(`.MuiTypography-root.jss5575.MuiTypography-body1[shub-ins=\"1\"]`).should(\"contain.text\", \"Prevailing Wage Case\");\n//*******Shipment Tracking******/\ncy.get(\".jss505 > .MuiTypography-root\").should(\"contain.text\", \"Shipment Tracking\");\n/***********Receipt Numbers******/\ncy.get(\".jss520 > .MuiTypography-root\").should(\"contain.text\", \"Receipt Numbers\");\n//***************Payment Status*******/\ncy.get(\".jss531 > .MuiTypography-root\").should(\"contain.text\", \"Payment Status\");",
               "err": {
-                "message": "AssertionError: Timed out retrying after 1000ms: expected '<p.MuiTypography-root.MuiTypography-body1>' to contain text 'Open Tasks', but the text was 'No value'",
-                "estack": "AssertionError: Timed out retrying after 1000ms: expected '<p.MuiTypography-root.MuiTypography-body1>' to contain text 'Open Tasks', but the text was 'No value'\n    at Context.eval (webpack://cypress-automation/./cypress/e2e/CaseView/CaseOverviewTab.cy.js:34:63)",
-                "diff": "- 'No value'\n+ 'Open Tasks'\n"
+                "message": "AssertionError: Timed out retrying after 1000ms: Expected to find element: `.jss547 > .MuiTypography-root`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 1000ms: Expected to find element: `.jss547 > .MuiTypography-root`, but never found it.\n    at Context.eval (webpack://cypress-automation/./cypress/e2e/CaseView/CaseOverviewTab.cy.js:34:63)",
+                "diff": null
               },
-              "uuid": "3d35b4cd-1717-4183-bf30-e5f920d57f52",
-              "parentUUID": "62c95bd9-e22b-4141-8ff4-54a6b2cf1c55",
+              "uuid": "3f0d71f3-3da4-4ad4-8eb5-a53d60ce1b80",
+              "parentUUID": "6d2ca34f-0cdb-4853-b27b-40f0d880f5fa",
               "isHook": false,
               "skipped": false
             },
@@ -60,7 +60,7 @@
               "title": "Verifying the Displaying Card from Name (Using 'Contains' keyword",
               "fullTitle": "Case's 'Overview' Tab Verifying the Displaying Card from Name (Using 'Contains' keyword",
               "timedOut": null,
-              "duration": 19960,
+              "duration": 23665,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -69,22 +69,22 @@
               "context": null,
               "code": "//*************Open task*****/\ncy.contains(\"Open Tasks\").should(\"be.visible\");\n//*************key dates*****/\ncy.contains(\"Key Dates\").scrollIntoView().should(\"be.visible\");\n//*************Prevailing Wage Case*****/\ncy.contains(\"Prevailing Wage Case\").should(\"be.visible\");\n/***********Receipt Numbers******/\ncy.contains(\"Receipt Numbers\").should(\"be.visible\");\n//*******Shipment Tracking******/\ncy.contains(\"Shipment Tracking\").scrollIntoView().should(\"be.visible\");\n//***************Payment Status*******/\ncy.contains(\"Payment Status\").scrollIntoView().should(\"be.visible\");",
               "err": {},
-              "uuid": "bdb345e0-5a25-48f3-9e7d-ec519737694b",
-              "parentUUID": "62c95bd9-e22b-4141-8ff4-54a6b2cf1c55",
+              "uuid": "fddb6326-d67b-435b-a18a-e96ba6f946ff",
+              "parentUUID": "6d2ca34f-0cdb-4853-b27b-40f0d880f5fa",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "bdb345e0-5a25-48f3-9e7d-ec519737694b"
+            "fddb6326-d67b-435b-a18a-e96ba6f946ff"
           ],
           "failures": [
-            "3d35b4cd-1717-4183-bf30-e5f920d57f52"
+            "3f0d71f3-3da4-4ad4-8eb5-a53d60ce1b80"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 40776,
+          "duration": 47534,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -100,7 +100,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "669d700a-26de-4915-9a61-4a6a13dbf4d3",
+      "uuid": "321d12f9-942a-43ac-8ebd-0caf982f0c33",
       "title": "",
       "fullFile": "cypress\\e2e\\CaseView\\CaseTaskTab.cy.js",
       "file": "cypress\\e2e\\CaseView\\CaseTaskTab.cy.js",
@@ -109,7 +109,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "fe777d9f-df0b-4e9d-8e3d-c19b807799de",
+          "uuid": "7e2e1f2e-2980-411f-8c9c-b6710ec26ca8",
           "title": "Case's 'Tasks' Tab",
           "fullFile": "",
           "file": "",
@@ -120,7 +120,7 @@
               "title": "Verification of 'Tasks list' Test",
               "fullTitle": "Case's 'Tasks' Tab Verification of 'Tasks list' Test",
               "timedOut": null,
-              "duration": 23240,
+              "duration": 31297,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -129,20 +129,20 @@
               "context": null,
               "code": "cy.contains(\"Set Case Team\").should(\"be.visible\");\ncy.contains(\"Set Task Timeline\").should(\"be.visible\");\ncy.contains(\"Set Required Forms and Documents\").should(\"be.visible\");\ncy.contains(\"Send Process Initiation Message to Foreign National\").should(\"be.visible\");\ncy.contains(\"Complete Questionnaire\").should(\"be.visible\");\ncy.contains(`Upload Documents (Foreign National)`).scrollIntoView().should(\"be.visible\");\ncy.contains(\"Upload Documents (Employer)\").should(\"be.visible\");\ncy.contains(\"Receive Case Invoice Payment\").should(\"be.visible\");\ncy.contains(\"Review Job Description\").should(\"be.visible\");\ncy.contains(\"Finalize Job Description\").should(\"be.visible\");\ncy.contains(\"Employee Confirms Requirements\").scrollIntoView().should(\"be.visible\");\ncy.contains(\"Prepare and Upload Experience Letter Templates\").should(\"be.visible\");\ncy.contains(\"Prepare Prevailing Wage Request\").should(\"be.visible\");\ncy.contains(\"Review Prevailing Wage Request\").should(\"be.visible\");\ncy.contains(\"File Prevailing Wage Request\").scrollIntoView().should(\"be.visible\");\ncy.contains(\"Receive Prevailing Wage Determination\").should(\"be.visible\");\ncy.contains(\"Prevailing Wage OK\").scrollIntoView().should(\"be.visible\");\ncy.contains(\"Upload Signed Experience Letters\").should(\"be.visible\");\ncy.contains(\"Review Signed Experience Letters\").should(\"be.visible\");\ncy.contains(\"Prepare Recruitment Templates\").should(\"be.visible\");\ncy.contains(\"Review Recruitment Templates\").should(\"be.visible\");\ncy.contains(\"Send Recruitment Templates to Vendor for Quote\").scrollIntoView().should(\"be.visible\");\ncy.contains(\"Send Recruitment Templates and Candidate Assessment to Client\").should(\"be.visible\");\ncy.contains(\"Approve Quote to Vendor\").should(\"be.visible\");\ncy.contains(\"Issue Recruitment Ads Invoice\").scrollIntoView().should(\"be.visible\");\ncy.contains(\"Receive Recruitment Ads Invoice Payment\").should(\"be.visible\");\ncy.contains(\"All Recruitment Complete and Review First Filing Date\").should(\"be.visible\");\ncy.contains(\"Prepare Audit File\").should(\"be.visible\");\ncy.contains(\"Review Audit File\").scrollIntoView().should(\"be.visible\");\ncy.contains(\"Upload Candidate Resumes and Assessments\").should(\"be.visible\");\ncy.contains(\"Draft PERM\").should(\"be.visible\");\ncy.contains(\"Share Draft PERM with Client and Employee\").should(\"be.visible\");\ncy.contains(\"Review and Submit PERM\").scrollIntoView().should(\"be.visible\");\ncy.contains(\"Receive Certified PERM\").should(\"be.visible\");\ncy.contains(\"Open I-140 Petition\").should(\"be.visible\");\ncy.contains(\"Check Priority Date for Current\").should(\"be.visible\");\ncy.contains(\"Set I-140 Task Timeline\").scrollIntoView().should(\"be.visible\");\ncy.contains(\"Set Required I-140 Forms and Documents\").should(\"be.visible\");\ncy.contains(\"Check Signature Page Version(s)\").should(\"be.visible\");\ncy.contains(\"Issue I-140 Invoice\").should(\"be.visible\");\ncy.contains(\"Receive I-140 Invoice Payment\").should(\"be.visible\");\ncy.contains(\"Review I-140 Information and Documents\").scrollIntoView().should(\"be.visible\");\ncy.contains(\"Prepare I-140 Forms\").should(\"be.visible\");\ncy.contains(\"Prepare I-140 LOS\").should(\"be.visible\");\ncy.contains(\"Review I-140 Forms\").should(\"be.visible\");\ncy.contains(\"Review I-140 Forms and Letter of Support\").should(\"be.visible\");\ncy.contains(\"Finalize I-140 Application for Attorney Review\").should(\"be.visible\");\ncy.contains(\"Review I-140 Application\").scrollIntoView().should(\"be.visible\");\ncy.contains(\"Ship I-140 Application\").should(\"be.visible\");\ncy.contains(\"Receive and Upload I-140 Receipt Notice\").should(\"be.visible\");\ncy.contains(\"Upload Decision Notice\").scrollIntoView().should(\"be.visible\");",
               "err": {},
-              "uuid": "29393e82-5d6a-4d2a-92b9-4c30dc0e3416",
-              "parentUUID": "fe777d9f-df0b-4e9d-8e3d-c19b807799de",
+              "uuid": "20b6e71c-f84f-40ea-956b-d5027b2e75e4",
+              "parentUUID": "7e2e1f2e-2980-411f-8c9c-b6710ec26ca8",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "29393e82-5d6a-4d2a-92b9-4c30dc0e3416"
+            "20b6e71c-f84f-40ea-956b-d5027b2e75e4"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 23240,
+          "duration": 31297,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -158,7 +158,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "acb57cb6-470b-4194-b178-d212abce272a",
+      "uuid": "fda4f0ff-983e-4a40-8d93-c361acd95e13",
       "title": "",
       "fullFile": "cypress\\e2e\\CaseView\\ProcessRequest.cy.js",
       "file": "cypress\\e2e\\CaseView\\ProcessRequest.cy.js",
@@ -167,7 +167,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "e5ed161e-2610-43ed-b0aa-5191d1916ab6",
+          "uuid": "6d707c1e-20b0-4695-9567-6099673ab1ad",
           "title": "New Process Request Creation",
           "fullFile": "",
           "file": "",
@@ -178,7 +178,7 @@
               "title": "New 'AOS' Process Request",
               "fullTitle": "New Process Request Creation New 'AOS' Process Request",
               "timedOut": null,
-              "duration": 32668,
+              "duration": 37086,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -187,20 +187,20 @@
               "context": null,
               "code": "cy.get('button[aria-label=\"Create\"]:visible').click();\ncy.wait(1000);\ncy.get('#Create-actions:visible > button[title=\"New Case\"]').click();\n//Drop down to searching sajid fn17\ncy.get(\"input.MuiInputBase-input\").click().type(\"sajid Fn17\").wait(3000).type(\"{downArrow}\").type(\"{enter}\");\ncy.wait(2000);\ncy.get('input[value=\"false\"]').click();\ncy.wait(2000);\ncy.contains(\"SHOW MORE OPTIONS\").click();\ncy.wait(3000);\n//**************** Select a case by name ************/\ncy.get('input[value=\"AOS\"]').click();\ncy.get(\"input#salary-input\").type(\"1200\");\ncy.get('input[value=\"REMOTE\"]').click();\ncy.contains(\"EXISTING JOB\").click();\ncy.wait(2000);\ncy.get(\"#job-select\").click();\ncy.get('li[data-value=\"f258db95-ca92-4173-8032-2c8d2f17a23d\"]').should(\"have.text\", \"QA Engineer\").click();\ncy.wait(500);\ncy.get(\"#special-notes-input\").type(\"Automating new 'AOS' Process Request with Cypress\");\ncy.contains(\"SUBMIT CASE REQUEST\").click();\ncy.get('a[href=\"/process-requests\"]').should(\"contain.text\", \"Process Requests\");\ncy.wait(5000);",
               "err": {},
-              "uuid": "91fe8458-eaa9-4eb5-8ed0-3a48fde87c6a",
-              "parentUUID": "e5ed161e-2610-43ed-b0aa-5191d1916ab6",
+              "uuid": "16228ad2-ce0f-473c-a043-617619a05c93",
+              "parentUUID": "6d707c1e-20b0-4695-9567-6099673ab1ad",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "91fe8458-eaa9-4eb5-8ed0-3a48fde87c6a"
+            "16228ad2-ce0f-473c-a043-617619a05c93"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 32668,
+          "duration": 37086,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -216,7 +216,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "0387f70e-4484-4580-a5a4-1ed3ab246b86",
+      "uuid": "f3806eed-16da-446d-a350-af60ad837f67",
       "title": "",
       "fullFile": "cypress\\e2e\\FnDocumentsDropdown.cy.js",
       "file": "cypress\\e2e\\FnDocumentsDropdown.cy.js",
@@ -225,7 +225,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "c21d0503-85c8-4c2f-9460-7cc613a9e450",
+          "uuid": "b9003feb-ae5e-4402-b263-2cb232c42d05",
           "title": "FN's Additional Documents Types",
           "fullFile": "",
           "file": "",
@@ -236,7 +236,7 @@
               "title": "Adding All List Documents",
               "fullTitle": "FN's Additional Documents Types Adding All List Documents",
               "timedOut": null,
-              "duration": 23823,
+              "duration": 33888,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -245,20 +245,20 @@
               "context": null,
               "code": "cy.visit(\"/\");\n//login\ncy.get(\"#username-input\").type(\"sajid.bashir+mh3@kwanso.com\");\ncy.get(\"#password-input\").type(\"Test#123{Enter}\");\n//clicking on contact and searching for sajid fn64\ncy.get('[href=\"/contacts\"] > .MuiButton-label').click();\ncy.get(\"#contact-navigation-2 > .MuiTab-wrapper\").click();\ncy.get(\".MuiTextField-root > .MuiInputBase-root > .MuiInputBase-input\").type(\"sajid fn64\");\ncy.wait(2000);\ncy.get(\".MuiLink-root > .MuiPaper-root\").click();\ncy.get(\"#person-navigation-4 > .MuiTab-wrapper\").click();\n//change the case for this specific users\ncy.get(\":nth-child(2) > :nth-child(1) > a\").click();\n//cy.wait(1000);\ncy.get(\"#case-navigation-2 > .MuiTab-wrapper\").click();\n// recursive function working as loop\nfunction AddDcument() {\n  cy.get(\"#case-navigationpanel-2 > section > div > div > button > span.MuiIconButton-label > svg\").click();\n  cy.get('.MuiList-root > [tabindex=\"0\"]').click();\n  cy.get(\"#modal\").then($element => {\n    const elementText = $element.text();\n    if (elementText.includes(\"There are no more documents left to add.\")) {\n      cy.get('button[data-title=\"close-button\"]').click();\n      return;\n    } else {\n      //open dropdown to add document types\n      cy.get(\"#mui-component-select-fileType\").click();\n      cy.get(\"#menu-fileType > div.MuiPaper-root.MuiMenu-paper.MuiPopover-paper.MuiPaper-elevation8.MuiPaper-rounded > ul > li:nth-child(1)\").click();\n      cy.get(\"button.MuiButtonBase-root.MuiButton-root.MuiButton-text.MuiButton-textPrimary\").click();\n      cy.wait(3000);\n    }\n    AddDcument(); // Call the function again for the next iteration\n  });\n}\n// Calling first time\nAddDcument();",
               "err": {},
-              "uuid": "2a1196d0-4c3c-442d-8650-d61eed364bca",
-              "parentUUID": "c21d0503-85c8-4c2f-9460-7cc613a9e450",
+              "uuid": "b9579821-d940-4737-8f5e-b2e45bc2e5bc",
+              "parentUUID": "b9003feb-ae5e-4402-b263-2cb232c42d05",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "2a1196d0-4c3c-442d-8650-d61eed364bca"
+            "b9579821-d940-4737-8f5e-b2e45bc2e5bc"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 23823,
+          "duration": 33888,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -274,7 +274,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "0ef797d7-c3e2-4238-95e4-48dc123ef2e9",
+      "uuid": "526b6952-e6fd-4828-881d-f536007d43e6",
       "title": "",
       "fullFile": "cypress\\e2e\\login.cy.js",
       "file": "cypress\\e2e\\login.cy.js",
@@ -283,7 +283,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "98a18a21-73ff-4eb6-8f82-30a5ce50a536",
+          "uuid": "4f72cd17-5e40-4f27-8022-4ad1d0338e73",
           "title": "New Process Request Creation",
           "fullFile": "",
           "file": "",
@@ -291,32 +291,32 @@
           "afterHooks": [],
           "tests": [
             {
-              "title": "login",
-              "fullTitle": "New Process Request Creation login",
+              "title": "login making class and object",
+              "fullTitle": "New Process Request Creation login making class and object",
               "timedOut": null,
-              "duration": 13309,
+              "duration": 6543,
               "state": "passed",
-              "speed": "slow",
+              "speed": "medium",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "cy.visit(\"/\"); // The base url is set in \"cypress.config.js\" file and we can use it globally\n//login\ncy.get(\"#username-input\").type(\"sajid.bashir+mh3@kwanso.com\");\ncy.get(\"#password-input\").type(\"Test#123{Enter}\");\ncy.wait(5000);\ncy.get(\"#header-avatar\").click();\ncy.wait(1000);\ncy.get(\"#header-sign-out\").click();\ncy.wait(4000);",
+              "code": "cy.visit(\"/\");\nconst login = new _login.default();\nlogin.setUserName(\"sajid.bashir+mh3@kwanso.com\");\nlogin.setPassword(\"Test#123\");\nlogin.clickSingIn();",
               "err": {},
-              "uuid": "66928ae0-a612-4874-9297-fb7934b444fa",
-              "parentUUID": "98a18a21-73ff-4eb6-8f82-30a5ce50a536",
+              "uuid": "f2e9d407-1821-4dda-b18a-f90b24c4f1af",
+              "parentUUID": "4f72cd17-5e40-4f27-8022-4ad1d0338e73",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "66928ae0-a612-4874-9297-fb7934b444fa"
+            "f2e9d407-1821-4dda-b18a-f90b24c4f1af"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 13309,
+          "duration": 6543,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -332,7 +332,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "97532b9c-cb15-4eba-8eeb-c6221f3d6c0c",
+      "uuid": "c193cffa-766d-4a0d-b7b0-50cf01a3cd30",
       "title": "",
       "fullFile": "cypress\\e2e\\CaseView\\CaseDocumentTab.cy.js",
       "file": "cypress\\e2e\\CaseView\\CaseDocumentTab.cy.js",
@@ -341,7 +341,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "34d00eae-25b2-49f7-8075-494fa9fbf7c4",
+          "uuid": "29506f5f-6988-4b1a-8a23-bcae8e5f07ba",
           "title": "Case's 'Document' Tab",
           "fullFile": "",
           "file": "",
@@ -352,29 +352,49 @@
               "title": "'File Uploading' Test",
               "fullTitle": "Case's 'Document' Tab 'File Uploading' Test",
               "timedOut": null,
-              "duration": 34337,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "cy.get(\"label[for='contained-button-file-DIPLOMA'] span[class='MuiButton-label']\").click();\n/*************Uploading a test file */\n// intercept for spying\ncy.intercept({\n  method: \"POST\",\n  url: \"https://72ao7fxqpvb63fn7mzt2j2cp3e.appsync-api.us-east-1.amazonaws.com/graphql\"\n}).as(\"fileUpload\");\n// select file from cypress fixtures folder for upload\ncy.get(\"input[type=file]\").eq(2).selectFile(\"cypress//fixtures//testfile.png\", {\n  force: true\n});\n// assertion for wait file upload\ncy.waitUntil(() => cy.get(\"@fileUpload\").its(\"response.statusCode\").should(\"equal\", 200), {\n  timeout: 0,\n  interval: 500,\n  errorMsg: \"Request did not occur within the specified time.\"\n});\ncy.log(\"File Uplaoded Successfully\");\n/*************Removing a test file */\n/*\ncy.contains(\"bot\")\n  .should(\"be.visible\")\n  .find('button[type=\"button\"]')\n  .click({ force: true });\n  cy.log(\"File Removed Successfully\");\n*/",
+              "err": {},
+              "uuid": "4de67cef-5ca8-4c11-934b-cb0272bd18df",
+              "parentUUID": "29506f5f-6988-4b1a-8a23-bcae8e5f07ba",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "File uplaod",
+              "fullTitle": "Case's 'Document' Tab File uplaod",
+              "timedOut": null,
+              "duration": 63100,
               "state": "passed",
               "speed": "slow",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "cy.get(\"label[for='contained-button-file-DIPLOMA'] span[class='MuiButton-label']\").click();\n/*************Uploading a test file */\n// intercept for spying\ncy.intercept({\n  method: \"POST\",\n  url: \"https://72ao7fxqpvb63fn7mzt2j2cp3e.appsync-api.us-east-1.amazonaws.com/graphql\"\n}).as(\"fileUpload\");\n// select file from cypress fixtures folder for upload\ncy.get(\"input[type=file]\").eq(2).selectFile(\"cypress//fixtures//testfile.png\", {\n  force: true\n});\n// assertion for wait file upload\ncy.waitUntil(() => cy.get(\"@fileUpload\").its(\"response.statusCode\").should(\"equal\", 200), {\n  timeout: 0,\n  interval: 500,\n  errorMsg: \"Request did not occur within the specified time.\"\n});\ncy.log(\"File Uplaoded Successfully\");\n/*************Removing a test file */\n/*\ncy.contains(\"bot\")\n  .should(\"be.visible\")\n  .find('button[type=\"button\"]')\n  .click({ force: true });\n  cy.log(\"File Removed Successfully\");\n*/",
+              "code": "cy.get('[href=\"/contacts\"] > .MuiButton-label').click();\ncy.get(\"#contact-navigation-2 > .MuiTab-wrapper\").click();\ncy.get(\".MuiTextField-root > .MuiInputBase-root > .MuiInputBase-input\").type(\"sajid fn{Enter}\");\ncy.wait(5000);\ncy.get('[href=\"/people/sajid-fn4-2\"] > .MuiPaper-root').click();\ncy.get(\"#person-navigation-1 > .MuiTab-wrapper\").click();\ncy.get(\"label[for='contained-button-file-DIPLOMA'] span[class='MuiButton-label']\").click();\ncy.get(\"input[type=file]\").eq(0).selectFile(\"cypress//fixtures//testfile.png\", {\n  force: true\n});\n//file to uplaod (if we choser the css selector type file only then the uploaded file will be display in cypress)\n//cy.get(\"label[for='contained-button-file-DIPLOMA'] span[class='MuiButton-label']\").attachFile('bot.jpg');\n//cy.wait(5000);",
               "err": {},
-              "uuid": "fe739681-df4d-4f7d-950b-5d6fafd12614",
-              "parentUUID": "34d00eae-25b2-49f7-8075-494fa9fbf7c4",
+              "uuid": "3acfd605-cef2-4fcf-a3a8-997280d78b13",
+              "parentUUID": "29506f5f-6988-4b1a-8a23-bcae8e5f07ba",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "fe739681-df4d-4f7d-950b-5d6fafd12614"
+            "3acfd605-cef2-4fcf-a3a8-997280d78b13"
           ],
           "failures": [],
-          "pending": [],
+          "pending": [
+            "4de67cef-5ca8-4c11-934b-cb0272bd18df"
+          ],
           "skipped": [],
-          "duration": 34337,
+          "duration": 63100,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
