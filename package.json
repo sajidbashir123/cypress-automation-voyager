@@ -11,6 +11,7 @@
     "cypress-cloud": "npm run test -- --record --key 15f21129-77a6-4c3f-bfbf-9611f2b67a70",
     "case-overview-tab": "npm run test -- --spec \"cypress/e2e/CaseView/CaseOverviewTab.cy.js\"",
     "html-report-case-overview-tab": "npm run test --reporter mochawesome -- --spec \"cypress/e2e/CaseView/CaseOverviewTab.cy.js\"",
+    "login": "cypress run --record --key 15f21129-77a6-4c3f-bfbf-9611f2b67a70 --spec cypress/e2e/login.cy.js",
     "html-report-all-specs": "npm run test -- --record --key 15f21129-77a6-4c3f-bfbf-9611f2b67a70 --reporter mochawesome",
     "merge-reports": "mochawesome-merge cypress/results/*.json -o cypress/mochawesome-merged/merged.json",
     "generate-html-report": "npx mochawesome-report-generator cypress/mochawesome-merged/merged.json -o mochawesome-html-report -f merged.html"
