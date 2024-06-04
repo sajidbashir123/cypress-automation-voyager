@@ -9,9 +9,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       
-      # Clear Cypress cache
-      - name: Clear Cypress cache
-        run: npx cypress cache clear
+      # # Clear Cypress cache
+      # - name: Clear Cypress cache
+      #   run: npx cypress cache clear
 
       # Install npm dependencies
       - name: Install dependencies
