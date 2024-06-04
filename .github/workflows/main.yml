@@ -8,12 +8,15 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      # Install npm dependencies, cache them correctly
-      # and run all Cypress tests
+      
       # Clear Cypress cache
       - name: Clear Cypress cache
         run: npx cypress cache clear
 
-      - name: Cypress run
-        uses: cypress-io/github-action@v6
+      # Install npm dependencies
+      - name: Install dependencies
+        run: npm install
+
+      # Run the login script
+      - name: Run login test
         run: npm run login
