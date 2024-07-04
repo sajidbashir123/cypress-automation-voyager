@@ -4,7 +4,7 @@ module.exports = defineConfig({
   projectId: "jw13m9",
   e2e: {
     baseUrl: "https://dev.meltzerhellrung.com",
-    video: false,
+    video: true,
     watchForFileChanges: false, // Not run automatically after any file changes
     defaultCommandTimeout: 20000,
     reporter: "mochawesome", // To generate the HTML report of the executed tested case for external use. it added when we install the mochaawesome dependency
