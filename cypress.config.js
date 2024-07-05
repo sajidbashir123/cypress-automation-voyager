@@ -2,6 +2,11 @@ const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
   projectId: "jw13m9",
+
+  env: {
+    USERNAME: "sajid.bashir+mh3@kwanso.com",
+    PASSWORD: "Test#123",
+  },
   e2e: {
     baseUrl: "https://dev.meltzerhellrung.com",
     video: true,

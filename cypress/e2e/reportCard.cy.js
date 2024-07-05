@@ -6,8 +6,8 @@ const reportPage = new ReportPage();
 
 describe("Verifying the text on report cards", () => {
   beforeEach("login", () => {
-    const validemail = "sajid.bashir+mh3@kwanso.com";
-    const validpassword = "Test#123";
+    const validemail = Cypress.env("USERNAME");
+    const validpassword = Cypress.env("PASSWORD");
     cy.SignIn(validemail, validpassword);
     cy.visit("/");
     reportPage.clickReportIcon();

@@ -2,8 +2,8 @@
 import { Login } from "../support/pageObjects/loginPage";
 
 describe("Use of Hooks in Voyaer", () => {
-  const validemail = "sajid.bashir+mh3@kwanso.com";
-  const validpassword = "Test#123";
+  const validemail = Cypress.env("USERNAME");
+  const validpassword = Cypress.env("PASSWORD");
   before("SignIn to Voyager", () => {
     cy.SignIn(validemail, validpassword);
   });
@@ -34,13 +34,11 @@ describe("Use of Hooks in Voyaer", () => {
   });
 
   afterEach("logout after each test", () => {
-    //write the logout code here
     cy.get("#header-avatar").click();
     cy.get("#header-sign-out").click();
   });
 
   after("Verify user has logout successfuly", () => {
-    //write the logout code here
     cy.get(".MuiButtonBase-root").should("be.visible");
   });
 });
