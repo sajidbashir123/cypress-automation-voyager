@@ -2,7 +2,7 @@
 
 describe("New Process Request Creation", () => {
   beforeEach("login", () => {
-    cy.visit("/"); // The base url is set in "cypress.config.js" file and we can use it globally
+    cy.visit("https://dev.meltzerhellrung.com"); // The base url is set in "cypress.config.js" file and we can use it globally
     //login
     cy.get("#username-input").type("sajid.bashir+mh3@kwanso.com");
     cy.get("#password-input").type("Test#123{Enter}");
@@ -39,6 +39,7 @@ describe("New Process Request Creation", () => {
     cy.get("#special-notes-input").type(
       "Automating new 'AOS' Process Request with Cypress"
     );
+
     cy.contains("SUBMIT CASE REQUEST").click();
     cy.get('a[href="/process-requests"]').should(
       "contain.text",

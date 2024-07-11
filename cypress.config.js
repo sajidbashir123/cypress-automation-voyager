@@ -4,11 +4,12 @@ module.exports = defineConfig({
   projectId: "jw13m9",
 
   env: {
-    USERNAME: "sajid.bashir+mh3@kwanso.com",
+    USERNAME: "sajid.bashir+mst1@kwanso.com",
     PASSWORD: "Test#123",
   },
   e2e: {
-    baseUrl: "https://dev.meltzerhellrung.com",
+    //baseUrl: "https://dev.meltzerhellrung.com",
+    baseUrl: "https://staging.meltzerhellrung.com",
     video: true,
     watchForFileChanges: false, // Not run automatically after any file changes
     defaultCommandTimeout: 20000,
