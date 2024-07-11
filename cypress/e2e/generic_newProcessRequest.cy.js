@@ -45,6 +45,7 @@ const processTypes = [
     selector: 'input[value="H_1B1_CONSULATE"]',
     notes: "Automating new 'H-1B1 Consulate' Process Request with Cypress",
   },
+
   {
     Name: "TN USCIS",
     selector: 'input[value="TN"]',
@@ -80,14 +81,14 @@ const processTypes = [
 
 //***********************
 
-describe("All Process Request Creation", () => {
+describe("Company sponsord all process types", () => {
   beforeEach("SignIn to Voyager", () => {
     cy.SignIn(validemail, validpassword);
     cy.visit("/");
   });
 
   processTypes.forEach((processType, index) => {
-    it(`should execute test case ${index + 1}`, () => {
+    it(`Executing process type ${processType.Name} ${index + 1}`, () => {
       processRequest.clickCreatNewRequest();
       processRequest.clickCreatCase();
       processRequest.clickExsistingIndividual();
@@ -112,7 +113,7 @@ describe("All Process Request Creation", () => {
       });
     });
 
-    it.skip("verify the request created correctly", () => {
+    it("verify the request created correctly", () => {
       cy.get('.MuiPaper-root > [href="/cases?mine=true"]').click();
       cy.reload();
       cy.wait(8000);
@@ -120,7 +121,7 @@ describe("All Process Request Creation", () => {
         "#root > div > main > nav > div.MuiBox-root:nth-child(4) > :nth-child(1)"
       )
         .should("be.visible")
-        .wait(1000)
+        .wait(3000)
         .click();
 
       cy.intercept({
