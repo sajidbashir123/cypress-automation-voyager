@@ -1,9 +1,14 @@
 /// <reference types="Cypress" />
 import { Login } from "../support/pageObjects/loginPage";
+import { ReportPage } from "../support/pageObjects/reportPage";
+import { Hooks } from "../support/pageObjects/hooksInVoyager";
+
+const reportPage = new ReportPage();
+const hooks = new Hooks();
+const validemail = Cypress.env("USERNAME");
+const validpassword = Cypress.env("PASSWORD");
 
 describe("Use of Hooks in Voyaer", () => {
-  const validemail = Cypress.env("USERNAME");
-  const validpassword = Cypress.env("PASSWORD");
   before("SignIn to Voyager", () => {
     cy.SignIn(validemail, validpassword);
   });
@@ -11,34 +16,36 @@ describe("Use of Hooks in Voyaer", () => {
   beforeEach("SignIn", () => {
     cy.SignIn(validemail, validpassword);
     cy.visit("/");
-    cy.get('[href="/reports"] > .MuiButton-label').click();
+    reportPage.clickReportIcon();
   });
 
   it("Verify the text on the ForeignNational card", () => {
-    cy.get(".MuiBox-root")
-      .find(".MuiTypography-root")
+    hooks.elements
+      .cardText()
       .should("be.visible")
       .and("contain.text", "Active Foreign Nationals");
   });
 
   it("Verify the text on the Company card", () => {
-    cy.contains("Active Companies")
+    hooks.elements
+      .cardText()
       .should("be.visible")
-      .and("have.text", "Active Companies");
+      .and("contain.text", "Active Companies");
   });
 
   it("Verify the text on the Case card", () => {
-    cy.contains("Open Cases")
+    hooks.elements
+      .cardText()
       .should("be.visible")
-      .and("have.text", "Open Cases");
+      .and("contain.text", "Open Cases");
   });
 
   afterEach("logout after each test", () => {
-    cy.get("#header-avatar").click();
-    cy.get("#header-sign-out").click();
+    hooks.clickProfileIcon();
+    hooks.clickSignOutText();
   });
 
   after("Verify user has logout successfuly", () => {
-    cy.get(".MuiButtonBase-root").should("be.visible");
+    hooks.verifyLoginScreen();
   });
 });
