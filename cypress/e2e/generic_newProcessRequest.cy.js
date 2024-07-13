@@ -1,13 +1,17 @@
 import { Login } from "../support/pageObjects/loginPage";
 import { ProcessRequest } from "../support/pageObjects/newprocessRequest";
+import { ApproveProcessRequest } from "../support/pageObjects/approvedRequest";
 /// <reference types="Cypress" />
+
+//***************************/
 
 const login = new Login();
 const processRequest = new ProcessRequest();
+const approvedProcessRequest = new ApproveProcessRequest();
 const validemail = Cypress.env("USERNAME");
 const validpassword = Cypress.env("PASSWORD");
 
-//////////////////////////
+//*************All Company Sponsored Process Request***************/
 
 const processTypes = [
   {
@@ -79,7 +83,7 @@ const processTypes = [
   },
 ];
 
-//***********************
+//Code to create a Process Request
 
 describe("Company sponsord all process types", () => {
   beforeEach("SignIn to Voyager", () => {
@@ -113,32 +117,27 @@ describe("Company sponsord all process types", () => {
       });
     });
 
-    it("verify the request created correctly", () => {
-      cy.get('.MuiPaper-root > [href="/cases?mine=true"]').click();
+    // Code to approved Process Reqest
+
+    it("Approved the Process request", () => {
+      approvedProcessRequest.clickCaseNevBar();
       cy.reload();
       cy.wait(8000);
-      cy.get(
-        "#root > div > main > nav > div.MuiBox-root:nth-child(4) > :nth-child(1)"
-      )
-        .should("be.visible")
-        .wait(3000)
-        .click();
-
+      approvedProcessRequest.clickFirstRequest();
       cy.intercept({
         method: "POST",
         url: "https://tr5vw5h2kfczrn3u4x56tssjue.appsync-api.us-east-1.amazonaws.com/graphql",
       }).as("CaseOpen");
-
       cy.log("Intercept set up");
-      cy.contains("Approve").click();
+      approvedProcessRequest.clickApproveButton();
       // Wait for the intercepted request to complete
       cy.wait("@CaseOpen", { timeout: 30000 }).then((interception) => {
         // Check that the request was successful
         expect(interception.response.statusCode).to.equal(200);
       });
       cy.wait(3000);
-      cy.contains("Overview").should("be.visible");
-      cy.log("Case Open Successfuly. Thank you!😊");
+      approvedProcessRequest.verifyCaseOpenPage();
+      cy.log("Case Open Successfuly. Thank you!");
     });
   });
 });
