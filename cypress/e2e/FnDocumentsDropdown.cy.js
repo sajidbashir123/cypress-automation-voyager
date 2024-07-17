@@ -4,7 +4,7 @@ describe("FN's Additional Documents Types", () => {
   it("Adding All List Documents", () => {
     cy.visit("/");
     //login
-    cy.get("#username-input").type("sajid.bashir+mst3@kwanso.com");
+    cy.get("#username-input").type("sajid.bashir+mh3@kwanso.com");
     cy.get("#password-input").type("Test#123{Enter}");
     //clicking on contact and searching for sajid fn64
     cy.get('[href="/contacts"] > .MuiButton-label').click();
