@@ -33,4 +33,11 @@ describe("Verifying the text on report cards", () => {
       .should("be.visible")
       .and("contain.text", "Open Cases");
   });
+
+  // it("Verify the text on the Case card", () => {
+  //   reportPage
+  //     .selectCard()
+  //     .should("be.visible")
+  //     .and("contain.text", "Open Tasks");
+  // });
 });

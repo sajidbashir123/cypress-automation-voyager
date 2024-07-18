@@ -28,7 +28,7 @@ export class ProcessRequest {
       .selectIndividual()
       .should("be.visible")
       .click()
-      .type("sajid ts3") //Drop down to searching FNs user sajid ts1
+      .type("sajid ts") //Drop down to searching FNs user sajid ts1
       .wait(3000)
       .type("{downArrow}")
       .type("{enter}");

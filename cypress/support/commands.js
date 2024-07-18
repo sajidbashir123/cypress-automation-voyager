@@ -53,3 +53,5 @@ Cypress.Commands.add("SignIn", (username, password) => {
       .and("contain.text", "Welcome back");
   });
 });
+
+// Custom for task tab

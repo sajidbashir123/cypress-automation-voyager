@@ -1,4 +1,4 @@
-import { CaseTasks } from "../../support/pageObjects/caseTask";
+import { CaseTasks } from "../support/pageObjects/caseTask";
 /// <reference types="Cypress" />
 
 const caseTasks = new CaseTasks();
