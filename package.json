@@ -12,6 +12,7 @@
     "hooksVoyager": "npm run test -- --spec \"cypress/e2e/hooksVoyager.cy.js\"",
     "html-report-reportCard": "npm run test --reporter mochawesome -- --spec \"cypress/e2e/reportCard.cy.js\"",
     "login": "cypress run --record --key 84301b20-b721-4410-b403-2143093c64d9 --spec cypress/e2e/login.cy.js",
+    "permGreenTasksList": "cypress run --record --key 84301b20-b721-4410-b403-2143093c64d9 --spec cypress/e2e/permGreenTasksList.cy.js",
     "html-report-all-specs": "npm run test -- --record --key 84301b20-b721-4410-b403-2143093c64d9 --reporter mochawesome",
     "merge-reports": "mochawesome-merge cypress/results/*.json -o cypress/mochawesome-merged/merged.json",
     "generate-html-report": "npx mochawesome-report-generator cypress/mochawesome-merged/merged.json -o mochawesome-html-report -f merged.html"
