@@ -16,7 +16,7 @@ export class Login {
   }
 
   setPassword(password) {
-    this.elements.txtPassword().type(password);
+    this.elements.txtPassword().type(password, { log: false });
   }
 
   clickSingIn() {
