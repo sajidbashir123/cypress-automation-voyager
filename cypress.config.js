@@ -20,8 +20,8 @@ module.exports = defineConfig({
       html: true,
       json: true,
     },
-    screenshotOnRunFailure: false,
-    //screenshotsFolder: "cypress/screenshots",
+    screenshotOnRunFailure: true,
+    screenshotsFolder: "cypress/screenshots",
 
     setupNodeEvents(on, config) {
       // implement node event listeners here
