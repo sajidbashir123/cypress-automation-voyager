@@ -11,6 +11,7 @@ const taskList = [
   { taskDescription: "Set Required Forms and Documents" },
   { taskDescription: "Send Process Initiation Message to Foreign National" },
   { taskDescription: "Complete Questionnaire" },
+  /*
   { taskDescription: `Upload Documents (Foreign National)` },
   { taskDescription: "Upload Documents (Employer)" },
   { taskDescription: "Receive Case Invoice Payment" },
@@ -59,6 +60,7 @@ const taskList = [
   { taskDescription: "Ship I-140 Application" },
   { taskDescription: "Receive and Upload I-140 Receipt Notice" },
   { taskDescription: "Upload Decision Notice" },
+  */
 ];
 
 //*****************************//
