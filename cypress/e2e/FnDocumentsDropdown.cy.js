@@ -2,7 +2,7 @@
 
 describe("FN's Additional Documents Types", () => {
   it("Adding All List Documents", () => {
-    cy.visit("/");
+    cy.visit("https://dev.meltzerhellrung.com/");
     //login
     cy.get("#username-input").type("sajid.bashir+mh3@kwanso.com");
     cy.get("#password-input").type("Test#123{Enter}");

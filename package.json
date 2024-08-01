@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "cypress run",
+    "reporting-page": "npx cypress run --spec cypress/e2e/reportCard.cy.js",
     "headed": "npm run test -- --headed",
     "chrome": "npm run headed -- --browser chrome",
     "reportCard": "npm run test -- --record --key 84301b20-b721-4410-b403-2143093c64d9 --spec \"cypress/e2e/reportCard.cy.js*/\"",
