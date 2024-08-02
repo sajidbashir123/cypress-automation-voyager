@@ -13,7 +13,7 @@ describe("Verifying the text on report cards", () => {
     reportPage.clickReportIcon();
   });
 
-  it("Verify the text on the ForeignNational card", () => {
+  it("Verify the text on the Foreign National card", () => {
     reportPage
       .selectCard()
       .should("be.visible")
