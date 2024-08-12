@@ -41,4 +41,3 @@ describe("Verifying the text on report cards", () => {
   //     .and("contain.text", "Open Tasks");
   // });
 });
-// test comments
