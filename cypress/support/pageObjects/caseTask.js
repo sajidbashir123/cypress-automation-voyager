@@ -6,10 +6,7 @@ export class CaseTasks {
     searchResult: () =>
       cy.get(".MuiTableBody-root > .MuiTableRow-root > th.MuiTableCell-root"),
     taskName: () => cy.get("#case-navigation-1 > .MuiTab-wrapper"),
-    alltask: () =>
-      cy.get(
-        "#case-navigationpanel-1 > section > div.MuiBox-root > button.MuiBox-root > div.MuiBox-root > p.MuiTypography-root"
-      ),
+    alltask: () => cy.get("p.MuiTypography-root.MuiTypography-body1"),
   };
 
   clickCaseNevBar() {
