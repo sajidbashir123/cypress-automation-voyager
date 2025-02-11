@@ -1,4 +1,4 @@
-/// <reference types="Cypress" />
+/// <reference types="cypress" />
 
 describe("General Hooks with Logs", () => {
   before("Before All", () => {
